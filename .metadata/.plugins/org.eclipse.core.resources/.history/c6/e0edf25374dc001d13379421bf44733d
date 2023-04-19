@@ -1,0 +1,9 @@
+package com.TourViaggi.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.TourViaggi.entity.Prenotazione;
+
+public interface PrenotazioneRepository extends JpaRepository<Prenotazione, Long> {
+
+}

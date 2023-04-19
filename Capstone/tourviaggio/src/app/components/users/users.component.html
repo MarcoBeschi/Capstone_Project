@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row">
+    <ng-container *ngIf="prenotazioni.length > 0; else noPrenotazioni">
+      <div class="d-flex justify-content-center">
+      <h2>Ecco i viaggi che hai prenotato</h2>
+      </div>
+      <div class="row g-0" id="carta" *ngFor="let prenotazione of prenotazioni" (click)="navigateToLocation(prenotazione.localita.id)">
+        <div class="col-md-4">
+          <img src="{{prenotazione?.localita?.fotoLocalita[1]}}" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body" >
+            <h5 class="card-title">{{ prenotazione?.localita?.titolo }}</h5>
+            <p class="card-text">Numero di partecipanti: {{ prenotazione?.numPartecipanti }}</p>
+            <p class="card-text">Giorni del tour: {{ prenotazione?.giorniTour }}</p>
+            <p class="card-text">Data: {{ prenotazione?.dataPrenotazione | date:'shortDate' }}</p>
+
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #noPrenotazioni >
+      <div class="col-12 noPrenotazioni">
+        <h3 class="text-center">Non hai ancora effettuato nessuna prenotazione.</h3>
+        <h4 class="text-center" routerLink="/homepage">Clicca qui per tornare alla HomePage</h4>
+      </div>
+    </ng-template>
+  </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,109 @@
+package com.TourViaggi.runner;
+
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+
+import java.util.Set;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
+
+import com.TourViaggi.entity.Attivita;
+import com.TourViaggi.entity.Localita;
+import com.TourViaggi.entity.Role;
+
+import com.TourViaggi.repository.LocalitaRepository;
+import com.TourViaggi.repository.RoleRepository;
+import com.TourViaggi.repository.UserRepository;
+import com.TourViaggi.service.AttivitaService;
+import com.TourViaggi.service.AuthService;
+import com.TourViaggi.service.LocalitaService;
+import com.TourViaggi.repository.AttivitaRepository;
+
+@Component
+public class TourRunner implements ApplicationRunner {
+	
+	@Autowired RoleRepository roleRepository;
+	@Autowired UserRepository userRepository;
+	@Autowired LocalitaRepository localitaRepository;
+	@Autowired AttivitaRepository AttivitaRepository;
+	@Autowired PasswordEncoder passwordEncoder;
+	@Autowired AuthService authService;
+	
+	private Set<Role> adminRole;
+	private Set<Role> moderatorRole;
+	private Set<Role> userRole;
+	
+    @Autowired
+    private LocalitaService localitaService;
+
+    @Autowired
+    private AttivitaService attivitaService;
+	
+	@Override
+	public void run(ApplicationArguments args) throws Exception {
+		System.out.println("Run...");
+		
+		 String url = "jdbc:postgresql://localhost:5432/viaggio";
+	        String username = "postgres";
+	        String password = "root";
+		
+	     try (Connection conn = DriverManager.getConnection(url, username, password);
+	             Statement stmt = conn.createStatement()) {
+	             
+	            String sql = "ALTER TABLE localita ALTER COLUMN descrizione1 TYPE VARCHAR(10000) USING LEFT(descrizione1, 1000);";
+	            stmt.executeUpdate(sql);
+	            
+	            String sql1 = "ALTER TABLE localita ALTER COLUMN descrizione2 TYPE VARCHAR(10000) USING LEFT(descrizione2, 1000);";
+	            stmt.executeUpdate(sql1);
+	            
+	            String sql2 = "ALTER TABLE localita ALTER COLUMN foto_localita TYPE VARCHAR(10000)[];";
+	            stmt.executeUpdate(sql2);
+	            
+	            
+	            System.out.println("La definizione della colonna è stata modificata con successo!");
+	            
+	        } catch (SQLException e) {
+	            System.out.println("Errore durante la modifica della definizione della colonna: " + e.getMessage());
+	        }
+		
+	     String[] l=new String[] {"foto1","foto2"};
+	     
+	     Localita localita1 = localitaService.creaLocalita("Roma","Roma", "Descrizione 1 di Roma", "Descrizione 2 di Roma", 10.0, "5 stelle",new String[] {"foto1","foto2"}, "https://www.youtube.com/watch?v=video_id_1", "123.4561", "789.0121");
+	     localitaService.salvaLocalita(localita1);
+
+	     Localita localita2 = localitaService.creaLocalita("Milano","Milano", "Descrizione 1 di Milano", "Descrizione 2 di Milano", 20.0, "4 stelle",new String[] {"foto1","foto2"}, "https://www.youtube.com/watch?v=video_id_2", "123.4562", "789.0122");
+	     localitaService.salvaLocalita(localita2);
+
+	        // crea e salva le attività per le località
+	        Attivita attivita1 = attivitaService.creaAttivita("Escursione", "Escursione alle cascate", "foto.jpg", localita1);
+	        attivitaService.salvaAttivita(attivita1);
+
+	        Attivita attivita2 = attivitaService.creaAttivita("Tour guidato", "Tour guidato del centro storico", "foto.jpg", localita1);
+	        attivitaService.salvaAttivita(attivita2);
+
+	        Attivita attivita3 = attivitaService.creaAttivita("Gita in barca", "Gita in barca lungo la costa", "foto.jpg", localita2);
+	        attivitaService.salvaAttivita(attivita3);
+	    }
+	
+	    
+	     
+	    
+	     
+	     
+	    
+		
+	}
+	
+	
+
+

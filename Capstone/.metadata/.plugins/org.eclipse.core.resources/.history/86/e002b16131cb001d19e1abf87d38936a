@@ -1,0 +1,21 @@
+package com.TourViaggi.service;
+
+
+
+import java.util.ArrayList;
+
+import com.TourViaggi.entity.Attivita;
+import com.TourViaggi.entity.Localita;
+import com.TourViaggi.repository.AttivitaRepository;
+import com.TourViaggi.repository.LocalitaRepository;
+
+public class AttivitaService {
+	
+	Localita localita = LocalitaRepository.findById(id).orElse(null);
+	
+	public void addAttivita(Long localitaId, Attivita attivita){
+	    Localita localita = LocalitaRepository.findById(localitaId).orElseThrow(() -> new RuntimeException("Localita not found"));
+	    attivita.setLocalita(localita);
+	    localita.getAttivita().add(attivita);
+	    AttivitaRepository.save(attivita);
+	}}

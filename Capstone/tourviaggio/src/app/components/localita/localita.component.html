@@ -1,0 +1,87 @@
+<app-navbar></app-navbar>
+<!--immagini-->
+<div *ngIf="localita" class="d-flex">
+  <div class="contenitore">
+    <div class="titolo">
+    <h2>{{localita.titolo}}</h2>
+    </div>
+  </div>
+  <div class="carousel slide d-md-none" data-ride="carousel">
+    <div class="carousel-inner">
+      <div *ngFor="let foto of localita.fotoLocalita; let i = index" class="carousel-item" [class.active]="i === 0">
+        <img [src]="foto" class="d-block immagine-fissa img-fluid" />
+      </div>
+    </div>
+  </div>
+  <img [src]="localita.fotoLocalita[1]" class="col-4 p-0 d-none d-md-block">
+  <div class="d-flex flex-column col-4 p-0 d-none d-md-flex">
+    <img [src]="localita.fotoLocalita[3]" class="flex-grow-1 img2 p-0">
+    <img [src]="localita.fotoLocalita[2]" class="flex-grow-1 img2  p-0">
+  </div>
+  <div class="d-flex flex-column col-4 p-0 d-none d-md-flex">
+    <img [src]="localita.fotoLocalita[0]" class="flex-grow-1 img2 p-0">
+    <img [src]="localita.fotoLocalita[4]" class="flex-grow-1 img2 p-0">
+  </div>
+</div>
+<!--inizio localita-->
+<div class="container">
+  <div>
+    <div class="fst-italic fw-bold row">
+      <h4 class="col-12 col-lg-4">{{localita.descrizione1}}</h4>
+      <iframe class="embed-responsive-item col-12 col-md-8" [src]="videoUrl" allow="autoplay" allowfullscreen></iframe>
+    </div>
+    <div class="col-12 ">
+      <h4 class="localita-descrizione2 mt-5">{{localita.descrizione2}}</h4>
+    </div>
+  </div>
+ <h2>Le Tappe che Proponiamo</h2>
+  <div  id="display">
+
+    <div class="container ">
+      <div class="row">
+        <div class="col-12">
+          <button class="apri-tappe" (click)="openModal()"><p >Clicca qui per scoprire alcune delle nostre tappe</p></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" #tappeModal id="tappeModal" tabindex="3" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Le nostre tappe</h5>
+            <button type="button" class="close" (click)="closeModal()" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div *ngFor="let tappa of localita?.tappe; let i = index" class="col-12 ">
+                <div class="card">
+                  <div class="card-body mb-2">
+                    <h4>Tappa {{ i + 1 }}</h4>
+                    <div class="card-text">
+                      <h5>{{tappa}}</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-4 ">
+      <app-prenotazione id="localita" [localita]="localita"[localitaId]="localita.id" [user]="user" ></app-prenotazione>
+    </div>
+  </div>
+<span class="pb-5 titolo-attivita">Attività Imperdibili</span>
+</div>
+<div id="attivita-card" class="row">
+<app-attivita *ngIf="localita" [localita]="localita" class="col-12 col-lg-7"></app-attivita>
+</div>
+<app-footer></app-footer>
+

@@ -1,0 +1,61 @@
+<form #prenotazioneForm="ngForm" (ngSubmit)="prenota()">
+  <div>
+    <h2 class="p-4">Prenota ora il tuo Tour</h2>
+    <h6 class=" fst-italic">Se prenoti per 3 giorni avrai uno sconto del 25%</h6>
+    <h5 class="pt-3 pb-2 fst-italic fw-bold">E per 5 Giorni otterai uno sconto del 35%</h5>
+  </div>
+  <div class="form-group">
+    <label for="dataPartecipazione">Indicaci la data di partecipazione</label>
+    <input type="date" class="form-control" id="dataPartecipazione" [(ngModel)]="data" name="dataPartecipazione" min="{{minDate}}" required>
+  </div>
+  <div class="form-group">
+    <label for="numPartecipanti">Scegli il numero di partecipanti</label>
+    <input type="number" class="form-control" id="numPartecipanti" [(ngModel)]="numPartecipanti" name="numPartecipanti" min="1" max="12" required #numPartecipantiField="ngModel">
+    <div *ngIf="numPartecipantiField.invalid && (numPartecipantiField.dirty || numPartecipantiField.touched)" class="alert alert-danger">
+      <div *ngIf="numPartecipantiField.errors && numPartecipantiField.errors['min']">Numero minimo di partecipanti: 1</div>
+      <div *ngIf="numPartecipantiField.errors && numPartecipantiField.errors['max']">Numero massimo di partecipanti: 12</div>
+      <div *ngIf="numPartecipantiField.errors && numPartecipantiField.errors['required']">Inserire il numero di partecipanti</div>
+
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="giorniTour">Scegli quanti giorni del tour</label>
+    <select class="form-control" id="giorniTour" [(ngModel)]="giorniTour" name="giorniTour" required>
+      <option value="1">1</option>
+      <option value="3">3</option>
+      <option value="5">5</option>
+    </select>
+  </div>
+  <div class="d-flex justify-content-evenly">
+  <span>Prezzo totale:</span>
+  <span>{{calcolaPrezzo() | number:'1.2-2'}} €</span>
+  </div>
+  <h6 class="pt-3 fst-italic fw-bold">Prenota ora un tour e verrai prontamente contattato da un nostro operatore per organizzare la tua magnifica esperienza</h6>
+  <div class="d-flex justify-content-center pt-2">
+  <button type="submit" class="btn btn-primary " [disabled]="!prenotazioneForm.valid">Prenota</button>
+  </div>
+</form>
+<div class="popup-wrapper" *ngIf="showPopup" (click)="closePopup()">
+  <div class="popup" (click)="$event.stopPropagation()">
+    <div class="popup-header">
+      <h4>Prenotazione</h4>
+      <button type="button" class="close" aria-label="Close" (click)="closePopup()">&times;</button>
+    </div>
+    <div class="popup-body">
+      <div *ngIf="prenotazioneSuccesso">
+        <h3>Complimenti </h3>
+        <h5>Il tuo viaggio è stato prenotato</h5>
+        <h6>Hai Prenotato per: {{localita.titolo}}</h6>
+        <p>Per: {{prenotazioneNumPartecipanti}} persone</p>
+        <p>Il: {{prenotazioneData}}</p>
+        <p>Per un tour di: {{prenotazioneGiorniTour}} giorni</p>
+      </div>
+      <div *ngIf="!prenotazioneSuccesso">
+        <h3 >Ci dispiace</h3>
+        <h5>Il tuo viaggio non è stato prenotato</h5>
+        <p>Riprova fra qualche minuto</p>
+        <p>Se risconti ancora problemi chiamaci direttamente</p>
+      </div>
+    </div>
+  </div>
+</div>

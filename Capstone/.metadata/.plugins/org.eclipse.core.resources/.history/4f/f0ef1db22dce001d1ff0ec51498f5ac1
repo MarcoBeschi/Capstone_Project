@@ -1,0 +1,26 @@
+package com.TourViaggi.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.TourViaggi.entity.Localita;
+import com.TourViaggi.service.LocalitaService;
+
+@RestController
+@RequestMapping("/api/auth")
+public class LocalitaController {
+    @Autowired
+    private LocalitaService localitaService;
+
+    @GetMapping("/localita")
+    public ResponseEntity<List<Localita>> getAllLocalita() {
+        List<Localita> localita = localitaService.findAll();
+        return new ResponseEntity<>(localita, HttpStatus.OK);
+    }
+}

@@ -1,0 +1,15 @@
+<ng-container id="attivita-card" *ngFor="let attivitaItem of attivita">
+  <div *ngIf="attivitaItem" class="card mb-3 attivita" >
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="attivitaItem.foto" [alt]="attivitaItem.titolo" class="attivita-image">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title" [innerText]="attivitaItem.titolo"></h2>
+          <h5 class="card-text" [innerText]="attivitaItem.descrizione"></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

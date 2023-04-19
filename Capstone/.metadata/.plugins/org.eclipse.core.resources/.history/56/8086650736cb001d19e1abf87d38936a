@@ -1,0 +1,102 @@
+package com.TourViaggi.runner;
+
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
+
+import com.TourViaggi.entity.Attivita;
+import com.TourViaggi.entity.Localita;
+import com.TourViaggi.entity.Role;
+
+import com.TourViaggi.repository.LocalitaRepository;
+import com.TourViaggi.repository.RoleRepository;
+import com.TourViaggi.repository.UserRepository;
+import com.TourViaggi.service.AuthService;
+import com.TourViaggi.repository.AttivitaRepository;
+
+@Component
+public class TourRunner implements ApplicationRunner {
+	
+	@Autowired RoleRepository roleRepository;
+	@Autowired UserRepository userRepository;
+	@Autowired LocalitaRepository localitaRepository;
+	@Autowired AttivitaRepository AttivitaRepository;
+	@Autowired PasswordEncoder passwordEncoder;
+	@Autowired AuthService authService;
+	
+	private Set<Role> adminRole;
+	private Set<Role> moderatorRole;
+	private Set<Role> userRole;
+	
+	@Override
+	public void run(ApplicationArguments args) throws Exception {
+		System.out.println("Run...");
+		
+		 String url = "jdbc:postgresql://localhost:5432/viaggio";
+	        String username = "postgres";
+	        String password = "root";
+		
+	     try (Connection conn = DriverManager.getConnection(url, username, password);
+	             Statement stmt = conn.createStatement()) {
+	             
+	            String sql = "ALTER TABLE localita ALTER COLUMN descrizione1 TYPE VARCHAR(10000) USING LEFT(descrizione1, 1000);";
+	            stmt.executeUpdate(sql);
+	            
+	            String sql1 = "ALTER TABLE localita ALTER COLUMN descrizione2 TYPE VARCHAR(10000) USING LEFT(descrizione2, 1000);";
+	            stmt.executeUpdate(sql1);
+	            
+	            String sql2 = "ALTER TABLE localita ALTER COLUMN foto_localita TYPE VARCHAR(10000)[];";
+	            stmt.executeUpdate(sql2);
+	            
+	            
+	            System.out.println("La definizione della colonna è stata modificata con successo!");
+	            
+	        } catch (SQLException e) {
+	            System.out.println("Errore durante la modifica della definizione della colonna: " + e.getMessage());
+	        }
+		
+	    
+	     
+	    /* List<Localita> localitaList = new ArrayList<>();
+	     localitaList.add(new Localita("Maldive", "Maldive", "Una meta da sogno, agognata dalla maggior parte dei turisti del mondo: benvenuti alle Maldive! Questo splendido arcipelago bagnato dall’Oceano Indiano gode di un clima spettacolare per tutta la durata dell'anno. Un paradiso incantevole, regno di barriere coralline, acque limpide e natura incontaminata.", "Quello dell’arcipelago delle Maldive è sicuramente uno dei mari più belli del mondo: le spiagge di sabbia bianca sono bagnate da acque limpide dove è un privilegio poter nuotare e scoprire le bellezze marine, praticare sport subacquei e provare l’incredibile sensazione di stare dispersi in un paradiso perduto, dove il tempo si ferma e non riparte più.", new String[]{"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.jambotour.it%2Fmaldive-esclusive-cinque-esperienze-imperdibili%2F&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABAE", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ansa.it%2Fcanale_viaggiart%2Fit%2Fnotizie%2Fmondo%2F2021%2F03%2F25%2Fsognando-le-maldive-in-attesa-di-tornare-a-viaggiare_c6dd5e42-464b-46dd-936c-006c1944f890.html&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABAJ","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dove-e-quando.it%2Fwhen%2Fasia-centrale-e-meridionale%2Fmaldive%2F&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABAR","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ilfattoquotidiano.it%2F2021%2F11%2F19%2Fmaldive-la-destinazione-piu-desiderata-dagli-italiani%2F6395487%2F&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABAx","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.travelfar.it%2Fguida-delle-maldive%2F&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABA5"}, "https://www.youtube.com/watch?v=pyaqH23zVdg", 79.99, "8.5/10", "3.202778", "73.220680"));
+	     localitaList.add(new Localita("New York", "New York", "Trovarsi al centro del mondo, nel cuore pulsante dell’arte e della moda internazionali, in un’incredibile fusione di culture e meraviglie, vuol dire solo una cosa: trovarsi a New York! Questa città non ha bisogno di presentazioni: è la protagonista dei film e telefilm più amati al mondo e, anche quando non si è mai vista da vicino, visitandola sembra di essere in un luogo accogliente e familiare.", "Un giro in città è il modo migliore per esplorare la New York amata e ammirata dai viaggiatori di tutto il mondo. Fermarsi nel cuore pulsante delle luci e delle musiche di Times Square, piazza simbolo della città, per scattare qualche foto e ammirare la gente che passa senza fermarsi mai sarà un’avventura nell’avventura! Uno scatto in questa meta leggendaria è d’obbligo, ma le attrazioni da visitare non mancheranno.", new String[]{"https://www.google.com/url?sa=i&url=https%3A%2F%2Fviaggi.corriere.it%2Famerica%2Fnew-york-guida-viaggi-cosa-fare%2F&psig=AOvVaw2O4TyNxVSTU8r84ZKRiExV&ust=1679581537451000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJiy_fje7_0CFQAAAAAdAAAAABAF", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.it%2Fpin%2F725783296183509531%2F&psig=AOvVaw2O4TyNxVSTU8r84ZKRiExV&ust=1679581537451000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJiy_fje7_0CFQAAAAAdAAAAABAQ","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.newyorkcity.it%2Fparchi-a-new-york%2F&psig=AOvVaw2O4TyNxVSTU8r84ZKRiExV&ust=1679581537451000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJiy_fje7_0CFQAAAAAdAAAAABBV","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.columbusassicurazioni.it%2Fguide-di-viaggio%2Fnord-america%2Fnew-york%2Fnyc%2Fempire-state-building%2F&psig=AOvVaw34NDRXTsdbPHIp9m3YUbfD&ust=1679581612582000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKjp7Jzf7_0CFQAAAAAdAAAAABAE","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.expedia.it%2Fstories%2Fstatua-della-liberta-15-cose-da-sapere-sul-simbolo-di-new-york%2F&psig=AOvVaw2KXZgj9MZwtnEfWvQs0ebM&ust=1679581630200000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNDCoqXf7_0CFQAAAAAdAAAAABAJ"}, "https://youtu.be/e5NKZffgfJ4?t=8", 99.99, "9/10", "40.712776", "-74.005974"));
+	     localitaList.add(new Localita("Tokyo", "Tokyo", "Tokyo è un’affascinante capitale, sospesa tra la conservazione del passato e la proiezione verso la modernità. Simboli dell’una e dell’altra dimensione culturale coesistono in una delle aree urbane più densamente abitate del mondo. Tokyo non ha piazze. La città altro non è che una costellazione di quartieri, ognuno dei quali ha il proprio punto di riferimento nella stazione ferroviaria.", "A Tokyo si scopre l’antica cultura tradizionale del Giappone. Simbolo del panorama urbano è il Palazzo imperiale ancora circondato dai profondi fossati e il Giardino Orientale dalla vegetazione rigogliosa.", new String[]{"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.elledecor.com%2Fit%2Fviaggi%2Fa40433607%2Fvisitare-tokyo-tutte-le-attrazioni-da-non-perdere%2F&psig=AOvVaw3c_u7XhHa0_VWQ-QjTpw30&ust=1679581171707000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJDU0crd7_0CFQAAAAAdAAAAABAE", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.getyourguide.it%2Ftokyo-l193%2F&psig=AOvVaw3c_u7XhHa0_VWQ-QjTpw30&ust=1679581171707000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJDU0crd7_0CFQAAAAAdAAAAABAb","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.doveclub.it%2Fvolohotel%2Fgiappone%2Ftokyo-tradizione-futuro%2F&psig=AOvVaw3c_u7XhHa0_VWQ-QjTpw30&ust=1679581171707000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJDU0crd7_0CFQAAAAAdAAAAABAh","https://www.google.com/url?sa=i&url=https%3A%2F%2Ftravel.thewom.it%2Fgiappone%2Fcosa-vedere-a-tokyo.html&psig=AOvVaw2DN20aSyWAyiE4mfvyqTu_&ust=1679581290619000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJDsm4Pe7_0CFQAAAAAdAAAAABAJ","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wearegaylyplanet.com%2Fgite-fuori-porta-da-tokyo%2F&psig=AOvVaw2FFY7HNJCiqPk2EkdaoEd1&ust=1679581351419000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCIiWp6De7_0CFQAAAAAdAAAAABAE"}, "https://youtu.be/OKAYqzOfLjY?t=11", 69.89, "8.5/10", "35.652832", "139.839478"));
+	     */
+	     Localita maldive = new Localita("Maldive", "Maldive", "Una meta da sogno, agognata dalla maggior parte dei turisti del mondo: benvenuti alle Maldive! Questo splendido arcipelago bagnato dall’Oceano Indiano gode di un clima spettacolare per tutta la durata dell'anno. Un paradiso incantevole, regno di barriere coralline, acque limpide e natura incontaminata.", "Quello dell’arcipelago delle Maldive è sicuramente uno dei mari più belli del mondo: le spiagge di sabbia bianca sono bagnate da acque limpide dove è un privilegio poter nuotare e scoprire le bellezze marine, praticare sport subacquei e provare l’incredibile sensazione di stare dispersi in un paradiso perduto, dove il tempo si ferma e non riparte più.", new String[]{"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.jambotour.it%2Fmaldive-esclusive-cinque-esperienze-imperdibili%2F&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABAE", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ansa.it%2Fcanale_viaggiart%2Fit%2Fnotizie%2Fmondo%2F2021%2F03%2F25%2Fsognando-le-maldive-in-attesa-di-tornare-a-viaggiare_c6dd5e42-464b-46dd-936c-006c1944f890.html&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABAJ","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dove-e-quando.it%2Fwhen%2Fasia-centrale-e-meridionale%2Fmaldive%2F&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABAR","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ilfattoquotidiano.it%2F2021%2F11%2F19%2Fmaldive-la-destinazione-piu-desiderata-dagli-italiani%2F6395487%2F&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABAx","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.travelfar.it%2Fguida-delle-maldive%2F&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABA5"}, "https://www.youtube.com/watch?v=pyaqH23zVdg", 79.99, "8.5/10", "3.202778", "73.220680"));
+	     Attivita maldivea1= new Attivita("","","");
+	     maldive.addAttivita();
+	     maldive.addAttivita("Immersioni");
+	     maldive.addAttivita("Escursioni in barca");
+	    
+	     
+	     for (Localita localita : localitaList) {
+	         localitaRepository.save(localita);
+	     }
+	     
+	     List<Attivita> attivitaList = new ArrayList<>();
+	     attivitaList.add(new Attivita("Colosseo", "Anfiteatro romano", "Piazza del Colosseo", localita));
+	     attivitaList.add(new Attivita("Fori Imperiali", "Complesso di edifici storici", "Via dei Fori Imperiali", localita));
+	     attivitaList.add(new Attivita("Fontana di Trevi", "Fontana barocca", "Piazza di Trevi", localita));
+
+	     
+	     
+	    
+		
+	}
+	
+	
+
+}

@@ -1,0 +1,14 @@
+package com.TourViaggi.service;
+
+import java.util.List;
+
+import org.springframework.http.ResponseEntity;
+
+import com.TourViaggi.entity.Localita;
+
+public interface LocalitaService {
+	public List<Localita> getAllLocalita();
+	 ResponseEntity<Localita> getLocalitaById(Long id);
+	 
+	 void prenotaLocalita(Long localitaId, Long userId, String data, int numPartecipanti);
+}

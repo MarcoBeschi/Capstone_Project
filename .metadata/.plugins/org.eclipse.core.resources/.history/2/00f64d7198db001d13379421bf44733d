@@ -1,0 +1,83 @@
+package com.TourViaggi.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.TourViaggi.entity.Localita;
+import com.TourViaggi.entity.User;
+import com.TourViaggi.repository.AttivitaRepository;
+import com.TourViaggi.repository.LocalitaRepository;
+import com.TourViaggi.repository.UserRepository;
+
+@Service
+public class LocalitaServiceImpl implements LocalitaService {
+
+    @Autowired
+    private LocalitaRepository localitaRepository;
+    @Autowired
+    private UserRepository userRepository;
+
+    public Localita creaLocalita(String name,String titolo, String descrizione1, String descrizione2, double prezzo,String[] tappe, String valutazione,String[] FotoLocalita, String video, String coordinataX, String coordinataY) {
+        Localita localita = new Localita();
+        localita.setName(name);
+        localita.setTappe(tappe);
+        localita.setTitolo(titolo);
+        localita.setDescrizione1(descrizione1);
+        localita.setDescrizione2(descrizione2);
+        localita.setPrezzo(prezzo);
+        localita.setValutazione(valutazione);
+        localita.setFotoLocalita(FotoLocalita);
+        localita.setVideo(video);
+        localita.setCoordinataX(coordinataX);
+        localita.setCoordinataY(coordinataY);
+        return localita;
+    }
+
+    public void salvaLocalita(Localita localita) {
+        localitaRepository.save(localita);
+    }
+
+
+    @Override
+    public List<Localita> getAllLocalita() {
+        List<Localita> localitaList = localitaRepository.findAll();
+        for (Localita localita : localitaList) {
+            localita.setAttivita(null);
+        }
+        return localitaList;
+    }
+
+	@Override
+	public ResponseEntity<Localita> getLocalitaById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
+	public void prenotaLocalita(Long localitaId, Long userId, String data, int numPartecipanti) {
+	    Optional<Localita> localitaOpt = localitaRepository.findById(localitaId);
+	    Optional<User> userOpt = userRepository.findById(userId);
+
+	    if (localitaOpt.isPresent() && userOpt.isPresent()) {
+	        Localita localita = localitaOpt.get();
+	        User user = userOpt.get();
+
+	        user.getPrenotazioni().add(localita);
+	        localita.setNumPartecipanti(localita.getNumPartecipanti() + numPartecipanti);
+	        localita.setDataPartecipazione(data);
+
+	        userRepository.save(user);
+	        localitaRepository.save(localita);
+	    } else {
+	        throw new RuntimeException("Località o utente non trovati");
+	    }
+	}
+
+}

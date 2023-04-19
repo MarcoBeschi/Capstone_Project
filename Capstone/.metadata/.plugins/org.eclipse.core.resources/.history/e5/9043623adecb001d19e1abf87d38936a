@@ -1,0 +1,44 @@
+package com.TourViaggi.repository;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.TourViaggi.entity.Localita;
+
+
+public interface LocalitaRepository extends JpaRepository<Localita, Long>{
+	
+	@Autowired LocalitaRepository localitaRepository;
+
+	public static void saveLocalitaList() {
+	    String[] nomiLocalita = {"Roma", "Milano", "Firenze", "Napoli"};
+	    double[] prezziLocalita = {10.0, 20.0, 30.0, 40.0};
+	    String[] descrizioni1Localita = {"Descrizione 1 della località 1", "Descrizione 1 della località 2", "Descrizione 1 della località 3", "Descrizione 1 della località 4"};
+	    String[] descrizioni2Localita = {"Descrizione 2 della località 1", "Descrizione 2 della località 2", "Descrizione 2 della località 3", "Descrizione 2 della località 4"};
+	    String[] valutazioniLocalita = {"5 stelle", "4 stelle", "4 stelle", "3 stelle"};
+	    String[] videoLocalita = {"https://www.youtube.com/watch?v=video_id_1", "https://www.youtube.com/watch?v=video_id_2", "https://www.youtube.com/watch?v=video_id_3", "https://www.youtube.com/watch?v=video_id_4"};
+	    String[] coordinateX = {"123.4561", "123.4562", "123.4563", "123.4564"};
+	    String[] coordinateY = {"789.0121", "789.0122", "789.0123", "789.0124"};
+
+	    List<Localita> localitaList = new ArrayList<>();
+	    for (int i = 0; i < nomiLocalita.length; i++) {
+	        Localita localita = new Localita();
+	        localita.setName(nomiLocalita[i]);
+	        localita.setPrezzo(prezziLocalita[i]);
+	        localita.setDescrizione1(descrizioni1Localita[i]);
+	        localita.setDescrizione2(descrizioni2Localita[i]);
+	        localita.setValutazione(valutazioniLocalita[i]);
+	        localita.setVideo(videoLocalita[i]);
+	        localita.setCoordinataX(coordinateX[i]);
+	        localita.setCoordinataY(coordinateY[i]);
+	        localitaList.add(localita);
+	    }
+
+	    localitaRepository.saveAll(localitaList);
+	}
+	
+}

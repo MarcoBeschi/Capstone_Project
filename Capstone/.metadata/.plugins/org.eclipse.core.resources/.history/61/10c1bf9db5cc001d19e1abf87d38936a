@@ -1,0 +1,118 @@
+package com.TourViaggi.runner;
+
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+
+import java.util.Set;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
+
+import com.TourViaggi.entity.Attivita;
+import com.TourViaggi.entity.Localita;
+import com.TourViaggi.entity.Role;
+
+import com.TourViaggi.repository.LocalitaRepository;
+import com.TourViaggi.repository.RoleRepository;
+import com.TourViaggi.repository.UserRepository;
+import com.TourViaggi.service.AttivitaService;
+import com.TourViaggi.service.AuthService;
+import com.TourViaggi.service.LocalitaService;
+import com.TourViaggi.repository.AttivitaRepository;
+
+@Component
+public class TourRunner implements ApplicationRunner {
+	
+	@Autowired RoleRepository roleRepository;
+	@Autowired UserRepository userRepository;
+	@Autowired LocalitaRepository localitaRepository;
+	@Autowired AttivitaRepository AttivitaRepository;
+	@Autowired PasswordEncoder passwordEncoder;
+	@Autowired AuthService authService;
+	
+	private Set<Role> adminRole;
+	private Set<Role> moderatorRole;
+	private Set<Role> userRole;
+	
+    @Autowired
+    private LocalitaService localitaService;
+
+    @Autowired
+    private AttivitaService attivitaService;
+	
+	@Override
+	public void run(ApplicationArguments args) throws Exception {
+		System.out.println("Run...");
+		
+		 String url = "jdbc:postgresql://localhost:5432/viaggio";
+	        String username = "postgres";
+	        String password = "root";
+		
+	     try (Connection conn = DriverManager.getConnection(url, username, password);
+	             Statement stmt = conn.createStatement()) {
+	             
+	            String sql = "ALTER TABLE localita ALTER COLUMN descrizione1 TYPE VARCHAR(10000) USING LEFT(descrizione1, 1000);";
+	            stmt.executeUpdate(sql);
+	            
+	            String sql1 = "ALTER TABLE localita ALTER COLUMN descrizione2 TYPE VARCHAR(10000) USING LEFT(descrizione2, 1000);";
+	            stmt.executeUpdate(sql1);
+	            
+	            String sql2 = "ALTER TABLE localita ALTER COLUMN foto_localita TYPE VARCHAR(10000)[];";
+	            stmt.executeUpdate(sql2);
+	            
+	            
+	            System.out.println("La definizione della colonna è stata modificata con successo!");
+	            
+	        } catch (SQLException e) {
+	            System.out.println("Errore durante la modifica della definizione della colonna: " + e.getMessage());
+	        }
+		
+	     
+	     //crea localita maldive con attivita associata
+	     Localita localita1 = localitaService.creaLocalita("Maldive","Maldive", "Una meta da sogno, agognata dalla maggior parte dei turisti del mondo: benvenuti alle Maldive! Questo splendido arcipelago bagnato dall’Oceano Indiano gode di un clima spettacolare per tutta la durata dell'anno. Un paradiso incantevole, regno di barriere coralline, acque limpide e natura incontaminata.", "Quello dell’arcipelago delle Maldive è sicuramente uno dei mari più belli del mondo: le spiagge di sabbia bianca sono bagnate da acque limpide dove è un privilegio poter nuotare e scoprire le bellezze marine, praticare sport subacquei e provare l’incredibile sensazione di stare dispersi in un paradiso perduto, dove il tempo si ferma e non riparte più.",new String[] {"Atollo di Ari\n"
+	     		+ "Diviso tra atollo di Ari Nord e atollo di Arsi Sud, comprende 40-50 isole e offre ogni tipo di divertimento. Dalle immersioni ad escursioni nella natura, a isolotti deserti dove giocare ad Adamo ed Eva durante una vacanza romantica, non c’è che l’imbarazzo della scelta. Consigliato soprattutto ai divers o aspiranti tali: ad Ari si trovano i migliori siti di immersione e numerose scuole di sub.","Atollo di Malè Nord\n"
+	     				+ "È il più grande della Maldive e insieme a quello di Malé Sud costituisce l’Atollo di Malé. Le isole principali sono: Hulhulè (dove sorge l’aeroporto internazionale), Kurumba, Faru, Kanifinolhu (fiori ovunque, il mare una tavola), Paradise Islands, Himmafushi, Hudhuveli.","Atollo di Malè Sud\n"
+	     						+ "Lungo 36 km e largo circa 20 km, l’atollo di Malè Sud è costituito da 30 isole, molte delle quali disabitate, ideale per chi vuole trascorre una vacanza alle Maldive all’insegna dello snorkeling e relax. Tra le isole più belle, quella di Guraidhoo, Vaadhoo e Vaagali","Atollo di Raa\n"
+	     								+ "Raggiungibile in idrovolante da Malé, da cui dista circa 150 km, è l’immagine più classica delle Maldive: spiagge bianchissime, isole ricoperte di palme e un mare turchese. Dimenticato a lungo dal turismo, la sua natura è davvero incontaminata, soprattutto sotto il pelo dell’acqua. I resort più belli delle Maldive si trovano qui: ovunque le acque cristalline e meraviglie subacquee, paradiso dei subaquei. \n"
+	     								+ "","Malè\n"
+	     										+ "Qui il viaggiatore salirà a bordo di un idrovolante che lo porterà al proprio hotel in uno dei tanti atolli sparsi sull'Oceano. Ma la capitale delle Maldive è anche la località migliore per conoscere la vita dei maldiviani. Con le sue case variopinte, grattacieli, moschee, tantissimi motorini e mercati affollati, Malé è una città caotica e contraltare della vita patinata dei resort all inclusive."}, 69.99, "5",new String[] {"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.jambotour.it%2Fmaldive-esclusive-cinque-esperienze-imperdibili%2F&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABAE","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ansa.it%2Fcanale_viaggiart%2Fit%2Fnotizie%2Fmondo%2F2021%2F03%2F25%2Fsognando-le-maldive-in-attesa-di-tornare-a-viaggiare_c6dd5e42-464b-46dd-936c-006c1944f890.html&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABAJ","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dove-e-quando.it%2Fwhen%2Fasia-centrale-e-meridionale%2Fmaldive%2F&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABAR","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ilfattoquotidiano.it%2F2021%2F11%2F19%2Fmaldive-la-destinazione-piu-desiderata-dagli-italiani%2F6395487%2F&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABAx","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.travelfar.it%2Fguida-delle-maldive%2F&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABA5"}, "https://youtu.be/pyaqH23zVdg", "3.2028", "73.2207");
+	     localitaService.salvaLocalita(localita1);
+	     Attivita attivita1_1 = attivitaService.creaAttivita("Escursione", "Escursione alle cascate", "foto.jpg", localita1);
+	        attivitaService.salvaAttivita(attivita1_1);
+	        Attivita attivita1_2 = attivitaService.creaAttivita("Tour guidato", "Tour guidato del centro storico", "foto.jpg", localita1);
+	        attivitaService.salvaAttivita(attivita1_2);
+	     
+	     Localita localita2 = localitaService.creaLocalita("Milano","Milano", "Descrizione 1 di Milano", "Descrizione 2 di Milano", 20.0, "4 stelle",new String[] {"foto1","foto2"}, "https://www.youtube.com/watch?v=video_id_2", "123.4562", "789.0122");
+	     localitaService.salvaLocalita(localita2);
+
+	        // crea e salva le attività per le località
+	
+
+	        Attivita attivita2 = attivitaService.creaAttivita("Tour guidato", "Tour guidato del centro storico", "foto.jpg", localita1);
+	        attivitaService.salvaAttivita(attivita2);
+
+	        Attivita attivita3 = attivitaService.creaAttivita("Gita in barca", "Gita in barca lungo la costa", "foto.jpg", localita2);
+	        attivitaService.salvaAttivita(attivita3);
+	    }
+	
+	    
+	     
+	    
+	     
+	     
+	    
+		
+	}
+	
+	
+
+

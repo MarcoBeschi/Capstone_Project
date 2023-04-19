@@ -1,0 +1,7 @@
+package com.TourViaggi.configuration;
+
+
+public class LocalitaConfiguration {
+
+	
+	}

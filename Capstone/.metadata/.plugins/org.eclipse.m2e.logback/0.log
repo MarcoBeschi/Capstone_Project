@@ -1,0 +1,548 @@
+2023-03-24 14:14:49,572 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-03-24 14:15:07,561 [Worker-15: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.springSECURITYExampleV2:springSECURITYExampleV2:0.0.1-SNAPSHOT @ C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\pom.xml.
+2023-03-24 14:15:10,172 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 14:15:10,210 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 14:15:10,223 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 14:20:57,522 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 14:20:57,522 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 14:20:57,524 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 14:21:37,922 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 14:21:37,930 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 14:21:37,937 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 14:23:42,076 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 14:23:42,083 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 14:23:42,087 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 14:31:33,604 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 14:31:33,610 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 14:31:33,614 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 14:54:49,275 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 14:54:49,282 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 14:54:49,285 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 14:55:06,622 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 14:55:06,639 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 14:55:06,641 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 14:56:01,452 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 14:56:01,458 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 14:56:01,462 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 14:56:07,753 [Worker-57: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 14:56:07,758 [Worker-57: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 14:56:07,762 [Worker-57: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 14:57:03,585 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 14:57:03,589 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 14:57:03,591 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:00:43,749 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:00:43,754 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:00:43,756 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:00:46,463 [Worker-28: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:00:46,473 [Worker-28: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:00:46,476 [Worker-28: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:10:23,835 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:10:23,839 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:10:23,841 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:10:31,558 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:10:31,562 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:10:31,564 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:11:01,663 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:11:01,667 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:11:01,669 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:12:49,967 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:12:49,971 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:12:49,975 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:19:21,966 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:19:21,974 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:19:21,977 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:22:57,837 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:22:57,842 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:22:57,844 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:23:13,848 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:23:13,858 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:23:13,860 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:23:19,101 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:23:19,110 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:23:19,113 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:24:15,656 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:24:15,660 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:24:15,662 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:24:58,515 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:24:58,518 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:24:58,519 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:28:16,529 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:28:16,536 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:28:16,539 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:28:44,040 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:28:44,044 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:28:44,046 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:29:33,270 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:29:33,275 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:29:33,310 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:32:41,131 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:32:41,136 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:32:41,139 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:32:48,319 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:32:48,323 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:32:48,324 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:40:16,777 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:40:16,781 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:40:16,782 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:43:07,422 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:43:07,425 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:43:07,428 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:43:49,929 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:43:49,934 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:43:49,937 [Worker-85: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 15:53:13,717 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 15:53:13,720 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 15:53:13,722 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 16:07:04,887 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 16:07:04,892 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 16:07:04,896 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 16:07:35,609 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 16:07:35,614 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 16:07:35,617 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 16:12:04,080 [Worker-83: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 16:12:04,089 [Worker-83: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 16:12:04,096 [Worker-83: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 16:18:07,155 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 16:18:07,159 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 16:18:07,161 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 16:32:07,226 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 16:32:07,257 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 16:32:07,259 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 16:33:34,346 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 16:33:34,351 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 16:33:34,353 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 16:37:27,678 [Worker-115: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 16:37:27,683 [Worker-115: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 16:37:27,687 [Worker-115: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 16:39:02,934 [Worker-117: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 16:39:02,938 [Worker-117: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 16:39:02,941 [Worker-117: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 16:42:38,104 [Worker-119: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 16:42:38,117 [Worker-119: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 16:42:38,121 [Worker-119: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 16:48:04,891 [Worker-122: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 16:48:04,900 [Worker-122: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 16:48:04,904 [Worker-122: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 16:49:30,212 [Worker-122: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 16:49:30,217 [Worker-122: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 16:49:30,222 [Worker-122: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 16:56:16,520 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 16:56:16,527 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 16:56:16,529 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 16:57:16,324 [Worker-133: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 16:57:16,332 [Worker-133: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 16:57:16,336 [Worker-133: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 16:58:52,296 [Worker-133: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 16:58:52,301 [Worker-133: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 16:58:52,304 [Worker-133: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 17:01:14,997 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 17:01:15,002 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 17:01:15,005 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 17:03:00,336 [Worker-134: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 17:03:00,340 [Worker-134: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 17:03:00,342 [Worker-134: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 17:05:16,678 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 17:05:16,682 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 17:05:16,684 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-24 17:06:03,872 [Worker-138: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-24 17:06:03,878 [Worker-138: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-24 17:06:03,883 [Worker-138: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 16:52:53,358 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-03-25 17:08:03,886 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 17:08:03,911 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 17:08:03,916 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 17:16:04,943 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 17:16:04,948 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 17:16:04,954 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 17:25:11,246 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 17:25:11,250 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 17:25:11,252 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 17:25:19,241 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 17:25:19,245 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 17:25:19,248 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 17:29:21,058 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 17:29:21,077 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 17:29:21,080 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 17:46:34,000 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 17:46:34,004 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 17:46:34,007 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 17:47:39,337 [Worker-58: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 17:47:39,343 [Worker-58: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 17:47:39,348 [Worker-58: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 17:52:17,408 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 17:52:17,412 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 17:52:17,416 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 17:52:38,167 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 17:52:38,172 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 17:52:38,175 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 17:55:40,500 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 17:55:40,506 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 17:55:40,510 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 17:55:44,115 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 17:55:44,118 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 17:55:44,119 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 17:58:04,523 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 17:58:04,529 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 17:58:04,532 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 17:58:10,274 [Worker-67: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 17:58:10,279 [Worker-67: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 17:58:10,282 [Worker-67: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 17:58:41,284 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 17:58:41,291 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 17:58:41,293 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 17:59:36,197 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 17:59:36,201 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 17:59:36,203 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 17:59:47,506 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 17:59:47,510 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 17:59:47,514 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 17:59:52,266 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 17:59:52,270 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 17:59:52,272 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 18:01:26,323 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 18:01:26,327 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 18:01:26,329 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 18:02:01,975 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 18:02:01,979 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 18:02:01,981 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 18:17:25,675 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 18:17:25,680 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 18:17:25,682 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 18:19:01,929 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 18:19:01,933 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 18:19:01,935 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 18:19:04,024 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 18:19:04,028 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 18:19:04,030 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 18:20:02,025 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 18:20:02,029 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 18:20:02,031 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 18:20:47,670 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 18:20:47,674 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 18:20:47,675 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 18:21:29,952 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 18:21:29,958 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 18:21:29,961 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 18:33:17,542 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 18:33:17,546 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 18:33:17,549 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 18:42:32,351 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 18:42:32,354 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 18:42:32,356 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 18:49:42,330 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 18:49:42,335 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 18:49:42,337 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 18:53:08,607 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 18:53:08,611 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 18:53:08,613 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 18:53:39,335 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 18:53:39,340 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 18:53:39,343 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 18:54:03,803 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 18:54:03,806 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 18:54:03,808 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 18:54:14,344 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 18:54:14,347 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 18:54:14,349 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 18:54:31,923 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 18:54:31,928 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 18:54:31,930 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 18:55:17,577 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 18:55:17,581 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 18:55:17,583 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 19:02:29,334 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 19:02:29,355 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 19:02:29,359 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 19:08:17,626 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 19:08:17,630 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 19:08:17,632 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-25 19:08:28,065 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149 [605])
+2023-03-25 19:08:28,081 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149
+2023-03-25 19:08:28,082 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\aether-connector-okhttp-0.17.8.jar
+2023-03-25 19:08:28,082 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\commons-cli-1.4.jar
+2023-03-25 19:08:28,082 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\commons-io-2.6.jar
+2023-03-25 19:08:28,082 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\commons-lang3-3.8.1.jar
+2023-03-25 19:08:28,083 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\guice-4.2.2-no_aop.jar
+2023-03-25 19:08:28,083 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\jansi-2.4.0.jar
+2023-03-25 19:08:28,083 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-artifact-3.8.6.jar
+2023-03-25 19:08:28,083 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-builder-support-3.8.6.jar
+2023-03-25 19:08:28,083 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-compat-3.8.6.jar
+2023-03-25 19:08:28,084 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-core-3.8.6.jar
+2023-03-25 19:08:28,084 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-embedder-3.8.6.jar
+2023-03-25 19:08:28,084 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-model-3.8.6.jar
+2023-03-25 19:08:28,084 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-model-builder-3.8.6.jar
+2023-03-25 19:08:28,084 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-plugin-api-3.8.6.jar
+2023-03-25 19:08:28,084 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-repository-metadata-3.8.6.jar
+2023-03-25 19:08:28,084 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-api-1.6.3.jar
+2023-03-25 19:08:28,084 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-connector-basic-1.6.3.jar
+2023-03-25 19:08:28,085 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-impl-1.6.3.jar
+2023-03-25 19:08:28,085 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-provider-3.8.6.jar
+2023-03-25 19:08:28,085 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-spi-1.6.3.jar
+2023-03-25 19:08:28,085 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-transport-wagon-1.6.3.jar
+2023-03-25 19:08:28,086 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-util-1.6.3.jar
+2023-03-25 19:08:28,086 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-settings-3.8.6.jar
+2023-03-25 19:08:28,086 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-settings-builder-3.8.6.jar
+2023-03-25 19:08:28,086 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-shared-utils-3.3.4.jar
+2023-03-25 19:08:28,086 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\okhttp-3.14.1.jar
+2023-03-25 19:08:28,086 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\okio-1.17.3.jar
+2023-03-25 19:08:28,086 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\org.eclipse.sisu.inject-0.3.5.jar
+2023-03-25 19:08:28,087 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\org.eclipse.sisu.plexus-0.3.5.jar
+2023-03-25 19:08:28,087 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-build-api-0.0.7.jar
+2023-03-25 19:08:28,087 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-cipher-2.0.jar
+2023-03-25 19:08:28,087 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-classworlds-2.6.0.jar
+2023-03-25 19:08:28,088 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-component-annotations-2.1.0.jar
+2023-03-25 19:08:28,088 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-interpolation-1.26.jar
+2023-03-25 19:08:28,088 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-sec-dispatcher-2.0.jar
+2023-03-25 19:08:28,088 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-utils-3.3.1.jar
+2023-03-25 19:08:28,088 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\wagon-file-3.5.1.jar
+2023-03-25 19:08:28,089 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\wagon-provider-api-3.5.1.jar
+2023-03-25 19:08:28,089 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_30.1.0.v20221112-0806 [10])
+2023-03-25 19:08:28,092 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\com.google.guava_30.1.0.v20221112-0806.jar
+2023-03-25 19:08:28,092 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_1.7.36 [917])
+2023-03-25 19:08:28,093 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\slf4j.api_1.7.36.jar
+2023-03-25 19:08:28,093 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.inject_1.0.0.v20220405-0441 [32])
+2023-03-25 19:08:28,094 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\javax.inject_1.0.0.v20220405-0441.jar
+2023-03-25 19:08:28,095 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.annotation_1.3.5.v20221112-0806 [30])
+2023-03-25 19:08:28,097 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\besch\.p2\pool\plugins\javax.annotation_1.3.5.v20221112-0806.jar
+2023-03-25 19:08:28,100 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi":
+2023-03-25 19:08:28,102 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install
+2023-03-25 19:08:28,103 [Worker-97: Launching Executing install in C__Users_besch_OneDrive_Desktop_capstone_backend_TourViaggi] WARN  o.e.m.i.l.MavenLaunchExtensionsSupport - Unknown or unsupported source locator org.eclipse.jdt.internal.launching.sourcelookup.advanced.AdvancedSourceLookupDirector
+2023-03-25 19:08:39,674 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-25 19:08:39,683 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-25 19:08:39,686 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-26 15:22:52,021 [Worker-110: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-26 15:22:52,061 [Worker-110: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-26 15:22:52,063 [Worker-110: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-26 15:23:41,167 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-26 15:23:41,172 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-26 15:23:41,174 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-26 15:53:24,854 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-26 15:53:24,871 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-26 15:53:24,873 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-26 15:53:38,398 [Worker-109: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-26 15:53:38,401 [Worker-109: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-26 15:53:38,404 [Worker-109: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-26 15:58:04,405 [Worker-117: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-26 15:58:04,410 [Worker-117: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-26 15:58:04,412 [Worker-117: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 14:07:15,069 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 14:07:15,204 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 14:07:15,209 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 15:21:07,218 [Worker-122: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 15:21:07,329 [Worker-122: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 15:21:07,335 [Worker-122: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 15:25:57,306 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 15:25:57,343 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 15:25:57,345 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 15:26:01,400 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 15:26:01,405 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 15:26:01,407 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 15:29:16,685 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 15:29:16,694 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 15:29:16,698 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 15:36:11,102 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 15:36:11,107 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 15:36:11,109 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 15:36:34,603 [Worker-135: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 15:36:34,607 [Worker-135: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 15:36:34,609 [Worker-135: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 15:44:11,195 [Worker-138: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 15:44:11,199 [Worker-138: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 15:44:11,200 [Worker-138: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 15:58:27,545 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 15:58:27,550 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 15:58:27,555 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 15:59:32,489 [Worker-147: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 15:59:32,494 [Worker-147: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 15:59:32,496 [Worker-147: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 16:01:19,215 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 16:01:19,218 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 16:01:19,220 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 16:01:31,546 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 16:01:31,551 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 16:01:31,553 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 16:04:26,679 [Worker-148: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 16:04:26,683 [Worker-148: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 16:04:26,685 [Worker-148: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 16:05:05,995 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 16:05:05,999 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 16:05:06,001 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 16:09:56,919 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 16:09:56,923 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 16:09:56,925 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 16:10:02,475 [Worker-148: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 16:10:02,481 [Worker-148: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 16:10:02,485 [Worker-148: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 16:16:06,878 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 16:16:06,886 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 16:16:06,890 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 16:24:09,757 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 16:24:09,762 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 16:24:09,764 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 16:29:24,645 [Worker-167: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 16:29:24,650 [Worker-167: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 16:29:24,653 [Worker-167: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 16:32:34,495 [Worker-171: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 16:32:34,505 [Worker-171: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 16:32:34,507 [Worker-171: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 16:33:02,759 [Worker-173: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 16:33:02,765 [Worker-173: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 16:33:02,767 [Worker-173: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 16:34:11,701 [Worker-172: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 16:34:11,707 [Worker-172: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 16:34:11,709 [Worker-172: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 16:34:48,554 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 16:34:48,558 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 16:34:48,560 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 16:35:20,923 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 16:35:20,927 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 16:35:20,928 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 16:35:25,482 [Worker-171: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 16:35:25,486 [Worker-171: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 16:35:25,488 [Worker-171: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 16:37:12,842 [Worker-168: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 16:37:12,846 [Worker-168: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 16:37:12,847 [Worker-168: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 16:37:37,901 [Worker-170: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 16:37:37,905 [Worker-170: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 16:37:37,907 [Worker-170: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 17:33:08,941 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 17:33:08,996 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 17:33:08,998 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 17:33:31,151 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 17:33:31,170 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 17:33:31,172 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 17:38:21,686 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 17:38:21,690 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 17:38:21,692 [Worker-178: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 17:39:52,688 [Worker-176: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 17:39:52,694 [Worker-176: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 17:39:52,699 [Worker-176: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 17:40:52,290 [Worker-177: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 17:40:52,295 [Worker-177: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 17:40:52,297 [Worker-177: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 17:40:57,572 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 17:40:57,576 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 17:40:57,578 [Worker-180: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 17:50:42,654 [Worker-175: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 17:50:42,665 [Worker-175: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 17:50:42,667 [Worker-175: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 18:00:05,239 [Worker-179: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 18:00:05,247 [Worker-179: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 18:00:05,253 [Worker-179: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 18:03:32,069 [Worker-188: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 18:03:32,075 [Worker-188: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 18:03:32,078 [Worker-188: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 18:06:00,426 [Worker-189: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 18:06:00,460 [Worker-189: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 18:06:00,468 [Worker-189: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 18:06:54,491 [Worker-186: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 18:06:54,498 [Worker-186: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 18:06:54,515 [Worker-186: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-27 18:07:13,951 [Worker-190: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-27 18:07:13,957 [Worker-190: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-27 18:07:13,960 [Worker-190: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-28 09:24:08,959 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-03-28 10:07:33,619 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-28 10:07:33,699 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-28 10:07:33,705 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-28 10:16:08,863 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-28 10:16:08,870 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-28 10:16:08,875 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-28 10:18:42,728 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-28 10:18:42,732 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-28 10:18:42,736 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-28 10:18:54,655 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-28 10:18:54,660 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-28 10:18:54,664 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-28 10:57:09,466 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-28 10:57:09,499 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-28 10:57:09,501 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-28 12:06:01,133 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-28 12:06:01,195 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-28 12:06:01,198 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-28 12:17:23,807 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-28 12:17:23,817 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-28 12:17:23,820 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-28 12:22:16,425 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-28 12:22:16,429 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-28 12:22:16,433 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-28 12:25:03,164 [Worker-78: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-28 12:25:03,171 [Worker-78: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-28 12:25:03,175 [Worker-78: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-28 16:02:18,022 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-28 16:02:18,032 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-28 16:02:18,036 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-28 17:58:39,753 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-28 17:58:39,815 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-28 17:58:39,818 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-28 18:37:00,547 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-03-28 19:28:22,690 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-28 19:28:22,731 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-28 19:28:22,734 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-29 10:37:57,014 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-03-29 10:45:28,273 [Worker-5: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-29 10:45:28,293 [Worker-5: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-29 10:45:28,296 [Worker-5: Launching TourViaggi - TourViaggi] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-29 11:04:21,352 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-29 11:04:21,362 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-29 11:04:21,369 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-29 11:11:13,307 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-29 11:11:13,322 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-29 11:11:13,325 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-29 14:20:03,997 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-29 14:20:04,037 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-29 14:20:04,040 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-29 14:20:37,007 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-29 14:20:37,030 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-29 14:20:37,033 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-29 14:31:57,829 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-29 14:31:57,841 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-29 14:31:57,845 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-29 15:48:09,762 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-29 15:48:09,784 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-29 15:48:09,786 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-29 15:59:53,503 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-29 15:59:53,507 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-29 15:59:53,511 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-29 16:00:12,848 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-29 16:00:12,873 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-29 16:00:12,880 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-29 16:00:19,790 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-29 16:00:19,796 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-29 16:00:19,798 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-29 16:00:26,780 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-29 16:00:26,784 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-29 16:00:26,786 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-29 16:01:10,455 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-29 16:01:10,474 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-29 16:01:10,477 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-29 16:01:21,476 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-29 16:01:21,481 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-29 16:01:21,483 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-29 16:02:25,784 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-29 16:02:25,790 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-29 16:02:25,794 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-29 16:54:26,436 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-03-29 16:54:52,392 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-29 16:54:52,428 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-29 16:54:52,439 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-29 17:39:34,047 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-29 17:39:34,071 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-29 17:39:34,076 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-29 17:58:51,802 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-29 17:58:51,811 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-29 17:58:51,815 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-29 18:03:46,938 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-29 18:03:46,943 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-29 18:03:46,945 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-29 18:03:50,227 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-29 18:03:50,238 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-29 18:03:50,242 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-29 18:04:00,274 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-29 18:04:00,278 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-29 18:04:00,280 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources
+2023-03-31 10:30:56,626 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-03-31 10:33:17,492 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-03-31 10:33:17,511 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-03-31 10:33:17,515 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\besch\OneDrive\Desktop\capstone\backend\TourViaggi\src\test\resources

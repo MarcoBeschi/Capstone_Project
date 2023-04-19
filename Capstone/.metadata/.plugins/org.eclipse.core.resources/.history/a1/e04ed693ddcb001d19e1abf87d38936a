@@ -1,0 +1,16 @@
+package com.TourViaggi.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.TourViaggi.entity.Localita;
+
+
+public interface LocalitaRepository extends JpaRepository<Localita, Long>{
+	
+	Optional<Localita> findByName(String name);
+	Optional<Localita> findByTitolo(String titolo);
+	Optional<Localita> findById(Long id);
+	
+}

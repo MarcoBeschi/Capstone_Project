@@ -1,0 +1,23 @@
+<div class="contenitore">
+  <div class="container">
+    <form #f="ngForm" (ngSubmit)="signUpForm(f)">
+      <div class="d-flex flex-column justify-content-center">
+        <p>REGISTRATI PER POTER PRENOTARE UN MAGNIFICO TOUR</p>
+        <input type="text" name="name" ngModel placeholder="nome" class=" form-group" required>
+        <input type="email" name="email" ngModel placeholder="email" class="form-group" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+<small *ngIf="f.controls['email']?.hasError('pattern')" class="alert alert-danger fw-bold">Invalid email format (aa@bbb.cc)</small>
+        <input type="password" name="password" ngModel placeholder="password" autocomplete="current-password" minlength="6" required pattern="(?=.*\d).{6,}">
+        <small *ngIf="f.controls['password']?.hasError('minlength')"class="alert alert-danger fw-bold">Password must be at least 6 characters long</small>
+        <small *ngIf="f.controls['password']?.hasError('pattern')" class="alert alert-danger fw-bold">Password must contain at least one number</small>
+        <input type="text" name="username" ngModel placeholder="username" minlength="4" required>
+        <small *ngIf="f.controls['username']?.hasError('minlength')" class="alert alert-danger fw-bold">Username must be at least 4 characters long</small>
+        <button type="submit" class="btn btn-info text-center text-dark fw-bold" [disabled]="!f.valid">Registrati</button>
+        <button type="submit" routerLink="/homepage" class="btn btn-info text-center text-dark fw-bold mt-3">Torna alla HomePage</button>
+        <p>Se sei gia registrato <em routerLink="/login"class="text-danger">Clicca Qui</em> </p>
+        <small *ngIf="errorMessage" class="alert alert-danger fw-bold text-danger">{{ errorMessage }}</small>
+      </div>
+    </form>
+  </div>
+</div>
+
+

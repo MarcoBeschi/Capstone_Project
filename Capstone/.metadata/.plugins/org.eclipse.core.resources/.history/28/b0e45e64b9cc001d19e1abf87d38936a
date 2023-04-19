@@ -1,0 +1,149 @@
+package com.TourViaggi.runner;
+
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+
+import java.util.Set;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
+
+import com.TourViaggi.entity.Attivita;
+import com.TourViaggi.entity.Localita;
+import com.TourViaggi.entity.Role;
+
+import com.TourViaggi.repository.LocalitaRepository;
+import com.TourViaggi.repository.RoleRepository;
+import com.TourViaggi.repository.UserRepository;
+import com.TourViaggi.service.AttivitaService;
+import com.TourViaggi.service.AuthService;
+import com.TourViaggi.service.LocalitaService;
+import com.TourViaggi.repository.AttivitaRepository;
+
+@Component
+public class TourRunner implements ApplicationRunner {
+	
+	@Autowired RoleRepository roleRepository;
+	@Autowired UserRepository userRepository;
+	@Autowired LocalitaRepository localitaRepository;
+	@Autowired AttivitaRepository AttivitaRepository;
+	@Autowired PasswordEncoder passwordEncoder;
+	@Autowired AuthService authService;
+	
+	private Set<Role> adminRole;
+	private Set<Role> moderatorRole;
+	private Set<Role> userRole;
+	
+    @Autowired
+    private LocalitaService localitaService;
+
+    @Autowired
+    private AttivitaService attivitaService;
+	
+	@Override
+	public void run(ApplicationArguments args) throws Exception {
+		System.out.println("Run...");
+		
+		 String url = "jdbc:postgresql://localhost:5432/viaggio";
+	        String username = "postgres";
+	        String password = "root";
+		
+	     try (Connection conn = DriverManager.getConnection(url, username, password);
+	             Statement stmt = conn.createStatement()) {
+	             
+	            String sql = "ALTER TABLE localita ALTER COLUMN descrizione1 TYPE VARCHAR(10000) USING LEFT(descrizione1, 1000);";
+	            stmt.executeUpdate(sql);
+	            
+	            String sql1 = "ALTER TABLE localita ALTER COLUMN descrizione2 TYPE VARCHAR(10000) USING LEFT(descrizione2, 1000);";
+	            stmt.executeUpdate(sql1);
+	            
+	            String sql2 = "ALTER TABLE localita ALTER COLUMN foto_localita TYPE VARCHAR(10000)[];";
+	            stmt.executeUpdate(sql2);
+	            
+	            String sql3 = "ALTER TABLE localita ALTER COLUMN tappe TYPE VARCHAR(10000)[];";
+	            stmt.executeUpdate(sql3);
+	            
+	            String sql4 = "ALTER TABLE attivita ALTER COLUMN descrizione TYPE VARCHAR(10000)[] USING descrizione::VARCHAR(10000)[]";
+	            stmt.executeUpdate(sql4);
+	            
+	            
+	            System.out.println("La definizione della colonna è stata modificata con successo!");
+	            
+	        } catch (SQLException e) {
+	            System.out.println("Errore durante la modifica della definizione della colonna: " + e.getMessage());
+	        }
+		
+	     
+	     //crea localita maldive con attivita associata
+	    /* Localita localita1 = localitaService.creaLocalita("Maldive","Maldive", "Una meta da sogno, agognata dalla maggior parte dei turisti del mondo: benvenuti alle Maldive! Questo splendido arcipelago bagnato dall’Oceano Indiano gode di un clima spettacolare per tutta la durata dell'anno. Un paradiso incantevole, regno di barriere coralline, acque limpide e natura incontaminata.", "Quello dell’arcipelago delle Maldive è sicuramente uno dei mari più belli del mondo: le spiagge di sabbia bianca sono bagnate da acque limpide dove è un privilegio poter nuotare e scoprire le bellezze marine, praticare sport subacquei e provare l’incredibile sensazione di stare dispersi in un paradiso perduto, dove il tempo si ferma e non riparte più.",69.99, new String[] {"Atollo di Ari\n"
+												 		+ "Diviso tra atollo di Ari Nord e atollo di Arsi Sud, comprende 40-50 isole e offre ogni tipo di divertimento. Dalle immersioni ad escursioni nella natura, a isolotti deserti dove giocare ad Adamo ed Eva durante una vacanza romantica, non c’è che l’imbarazzo della scelta. Consigliato soprattutto ai divers o aspiranti tali: ad Ari si trovano i migliori siti di immersione e numerose scuole di sub.","Atollo di Malè Nord\n"
+												 				+ "È il più grande della Maldive e insieme a quello di Malé Sud costituisce l’Atollo di Malé. Le isole principali sono: Hulhulè (dove sorge l’aeroporto internazionale), Kurumba, Faru, Kanifinolhu (fiori ovunque, il mare una tavola), Paradise Islands, Himmafushi, Hudhuveli.","Atollo di Malè Sud\n"
+												 						+ "Lungo 36 km e largo circa 20 km, l’atollo di Malè Sud è costituito da 30 isole, molte delle quali disabitate, ideale per chi vuole trascorre una vacanza alle Maldive all’insegna dello snorkeling e relax. Tra le isole più belle, quella di Guraidhoo, Vaadhoo e Vaagali","Atollo di Raa\n"
+												 								+ "Raggiungibile in idrovolante da Malé, da cui dista circa 150 km, è l’immagine più classica delle Maldive: spiagge bianchissime, isole ricoperte di palme e un mare turchese. Dimenticato a lungo dal turismo, la sua natura è davvero incontaminata, soprattutto sotto il pelo dell’acqua. I resort più belli delle Maldive si trovano qui: ovunque le acque cristalline e meraviglie subacquee, paradiso dei subaquei. \n"
+												 								+ "","Malè\n"
+												 										+ "Qui il viaggiatore salirà a bordo di un idrovolante che lo porterà al proprio hotel in uno dei tanti atolli sparsi sull'Oceano. Ma la capitale delle Maldive è anche la località migliore per conoscere la vita dei maldiviani. Con le sue case variopinte, grattacieli, moschee, tantissimi motorini e mercati affollati, Malé è una città caotica e contraltare della vita patinata dei resort all inclusive."}, "5",new String[] {"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.jambotour.it%2Fmaldive-esclusive-cinque-esperienze-imperdibili%2F&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABAE","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ansa.it%2Fcanale_viaggiart%2Fit%2Fnotizie%2Fmondo%2F2021%2F03%2F25%2Fsognando-le-maldive-in-attesa-di-tornare-a-viaggiare_c6dd5e42-464b-46dd-936c-006c1944f890.html&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABAJ","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dove-e-quando.it%2Fwhen%2Fasia-centrale-e-meridionale%2Fmaldive%2F&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABAR","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ilfattoquotidiano.it%2F2021%2F11%2F19%2Fmaldive-la-destinazione-piu-desiderata-dagli-italiani%2F6395487%2F&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABAx","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.travelfar.it%2Fguida-delle-maldive%2F&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABA5"}, "https://youtu.be/pyaqH23zVdg", "3.2028", "73.2207");
+	     localitaService.salvaLocalita(localita1);
+	     Attivita attivita1_1 = attivitaService.creaAttivita("Escursione", "Escursione alle cascate", "foto.jpg", localita1);
+	        attivitaService.salvaAttivita(attivita1_1);
+	        Attivita attivita1_2 = attivitaService.creaAttivita("Tour guidato", "Tour guidato del centro storico", "foto.jpg", localita1);
+	        attivitaService.salvaAttivita(attivita1_2);*/
+	     
+	        
+	      //crea localita tokyo con attivita associata
+	     Localita localita2 = localitaService.creaLocalita("Tokyo","Tokyo", "A Tokyo si scopre l’antica cultura tradizionale del Giappone. Simbolo del panorama urbano è il Palazzo imperiale ancora circondato dai profondi fossati e il Giardino Orientale dalla vegetazione rigogliosa.","Tokyo è un’affascinante capitale, sospesa tra la conservazione del passato e la proiezione verso la modernità. Simboli dell’una e dell’altra dimensione culturale coesistono in una delle aree urbane più densamente abitate del mondo. Tokyo non ha piazze. La città altro non è che una costellazione di quartieri, ognuno dei quali ha il proprio punto di riferimento nella stazione ferroviaria.", 89.99,new String[] {"Palazzo imperiale\n"
+	     		+ "Residenza ufficiale dell’imperatore e della sua famiglia, il Palazzo Imperiale è circondato da bellissimi giardini e da un ampio fossato, che lo separano dal resto della città. Qui, il suo Giardino Orientale è un luogo meraviglioso dove ammirare l’hanami, la fioritura dei ciliegi in primavera.","Santuario Meiji\n"
+	     				+ "Il santuario shintoista più grande di Tokyo, costruito in onore dell’Imperatore Meiji e di sua moglie Shōken, sorge all’interno di una foresta urbana di 100.000 alberi. Luogo perfetto per assistere ad un matrimonio shintoista che si svolge in un’atmosfera così solenne da sembrare quasi surreale.","Museo Nazionale di Tokyo\n"
+	     						+ "Situato all’interno del Parco di Ueno, il Museo Nazionale di Tokyo è il più grande e antico di tutto il Giappone. All’interno del palazzo, in stile imperiale, è custodita la più ricca collezione di arte giapponese del mondo che va dal periodo Jomon al periodo Edo, oltre a ceramiche, maschere e pitture","Isola di Odaiba\n"
+	     								+ "L’isola di Odaiba, Situata nella baia di Tokyo, è il luogo perfetto per una passeggiata al tramonto, momento in cui si può ammirare lo skyline di Tokyo con il Rainbow Bridge in primo piano.","Quartiere Shinjuku\n"
+	     										+ "Shinjuku è il quartiere più famoso di Tokyo dove si concentrano numerosi grattacieli, grandi centri commerciali e locali esuberanti.\n"
+	     										+ ""}, "4.5",new String[] {"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.elledecor.com%2Fit%2Fviaggi%2Fa40433607%2Fvisitare-tokyo-tutte-le-attrazioni-da-non-perdere%2F&psig=AOvVaw3c_u7XhHa0_VWQ-QjTpw30&ust=1679581171707000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJDU0crd7_0CFQAAAAAdAAAAABAE","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.getyourguide.it%2Ftokyo-l193%2F&psig=AOvVaw3c_u7XhHa0_VWQ-QjTpw30&ust=1679581171707000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJDU0crd7_0CFQAAAAAdAAAAABAb","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.doveclub.it%2Fvolohotel%2Fgiappone%2Ftokyo-tradizione-futuro%2F&psig=AOvVaw3c_u7XhHa0_VWQ-QjTpw30&ust=1679581171707000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJDU0crd7_0CFQAAAAAdAAAAABAh","https://www.google.com/url?sa=i&url=https%3A%2F%2Ftravel.thewom.it%2Fgiappone%2Fcosa-vedere-a-tokyo.html&psig=AOvVaw2DN20aSyWAyiE4mfvyqTu_&ust=1679581290619000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJDsm4Pe7_0CFQAAAAAdAAAAABAJ","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wearegaylyplanet.com%2Fgite-fuori-porta-da-tokyo%2F&psig=AOvVaw2FFY7HNJCiqPk2EkdaoEd1&ust=1679581351419000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCIiWp6De7_0CFQAAAAAdAAAAABAE"}, "https://youtu.be/OKAYqzOfLjY?t=11", "35.6895", "139.6917");
+	     localitaService.salvaLocalita(localita2);
+	     
+	     Attivita attivita2_1 = attivitaService.creaAttivita("Cerimonia del tè", "Nel XVI secolo il monaco buddhista zen Sen No Rikyū codificò il Cha no yu, la cerimonia del tè. Preparare e bere il tè matcha, inizialmente, era una pratica che soltanto i monaci potevano svolgere, durante le pratiche religiose. Poi questa cerimonia si diffuse tra i samurai, che ne fecero una parte fondamentale della Via del guerriero. Oggi potete prendere parte anche voi a questa antichissima tradizione, impararne i gesti e ripeterli, vivendo in prima persona questo rito sociale e spirituale, tra i più caratteristici della tradizione nipponica. Un esperto accompagnatore, che parla perfettamente italiano, vi darà tutte le informazioni necessarie per permettervi di godere al massimo di questo momento. Vi insegnerà la sequenza dei gesti che dovrete compiere e vi aiuterà ad entrare in contatto con gli aspetti fondamentali della filosofia zen che pervade questo rito.", "https://www.watabi.it/blog/wp-content/uploads/2020/04/cerimonia-del-te-copertina.jpg", localita2);
+	        attivitaService.salvaAttivita(attivita2_1);
+
+	     Attivita attivita2_2 = attivitaService.creaAttivita("Food Experience", "Tokyo è una delle principali capitali gastronomiche non solo del Giappone ma di tutto il mondo. A Tokyo si può mangiare davvero di tutto. Dall’alta cucina pluristellata con le più ricercate rivisitazioni della cucina gourmet alle antiche ricette locali servite nelle tipiche e intime locande. In questo paradiso del palato trova spazio ogni moda culinaria, ma ciò che va per la maggiore è la scoperta dello street food. Perché non trascorrere una serata a passeggio con un assistente Turisanda che vi accompagnerà nei quartieri più autentici di Tokyo? Caratteristiche aree di nicchia, ove fermarsi a cena in un tipico “izakaya giapponese” e dove si potranno degustare le specialità più amate dai giapponesi.", "https://www.psimonmyway.com/wp-content/uploads/2023/02/Izakaya-Food-Tours-in-Tokyo-Japan.jpg", localita2);
+	        attivitaService.salvaAttivita(attivita2_2);
+	     
+	     Attivita attivita2_3 = attivitaService.creaAttivita("Museo Digitale", "A Tokyo, la capitale dell’innovazione tecnologica a volte oltre il sorprendente, si trova il museo digitale più instagrammabile di tutti, creato dal famoso collettivo giapponese teamLab. Varcherete le porte dell’avamposto dello sperimentalismo più estremo e coinvolgente. Vivrete un’esperienza sensoriale incredibile che è difficile riassumete nella parola museo. I fondatori di teamLab Planets Tokyo hanno voluto esprimere l’assenza di confini tra le arti ma anche tra l’opera e il pubblico. Vi immergerete in uno spettacolo di luci, colori e suoni digitali che non ha confini e non ha eguali.", "https://staticfanpage.akamaized.net/wp-content/uploads/sites/10/2018/08/museo-digitale.jpg", localita2);
+	        attivitaService.salvaAttivita(attivita2_3);
+
+	     Attivita attivita2_4 = attivitaService.creaAttivita("Harajuku", "Chindogu è l’arte giapponese dell’inventare oggetti utili ma inutilizzabili: è anche per la sua stravagante inventiva che il Giappone si distingue da qualsiasi altro stato al mondo. Se volete capire quali sono le più nuove, bizzarre e sorprendenti mode nipponiche, andate ad Harajuku, il quartiere di Tokyo dove si riuniscono i giovani più alternativi della capitale e dove nascono le principali mode giovanili e tendenze. Proprio su uno dei suoi ponti è nata la passione per il cosplay, ora diffusa in tutto il mondo, l’usanza di indossare il costume del proprio manga preferito per le strade della città: non vi resta che passeggiare per queste strade per rivedere il vostro personaggio preferito!","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.isi-education.com%2Fit%2Flocation%2Fharajuku%2F&psig=AOvVaw20U0_w87Zh8Hj9Wx1bSSRd&ust=1680019052231000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCIju0ui8_P0CFQAAAAAdAAAAABAK", localita2);
+	        attivitaService.salvaAttivita(attivita2_4);
+	        
+	        // crea e salva le attività per le località
+	
+
+	    }
+	
+	/* Esempio creazione Localita localita2 = localitaService.creaLocalita("Milano","Milano", "Descrizione 1 di Milano", "Descrizione 2 di Milano", 20.0,new String[]{tappe}, "4 stelle",new String[] {"foto1","foto2"}, "https://www.youtube.com/watch?v=video_id_2", "123.4562", "789.0122");
+    localitaService.salvaLocalita(localita2);
+
+       // crea e salva le attività per le località
+
+
+       Attivita attivita2 = attivitaService.creaAttivita("Tour guidato", "Tour guidato del centro storico", "foto.jpg", localita1);
+       attivitaService.salvaAttivita(attivita2);
+
+       Attivita attivita3 = attivitaService.creaAttivita("Gita in barca", "Gita in barca lungo la costa", "foto.jpg", localita2);
+       attivitaService.salvaAttivita(attivita3);*/
+	     
+	    
+	     
+	     
+	    
+		
+	}
+	
+	
+
+

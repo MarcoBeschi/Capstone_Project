@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container > div {
+  text-align: center;
+}
+
+.container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container ul li {
+  margin: 0.5em;
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.container ul li svg {
+  height: 4.5em;
+  width: 4.5em;
+  margin-right: 0.5em;
+  vertical-align: middle;
+  color: rgb(90, 142, 13);
+  margin-top: 2rem;
+
+}
+
+h4{
+  font-size: 3.5rem;
+  margin-top: 4rem;
+  font-weight: bold;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+.titolo{
+  font-weight: bold;
+  font-size: 2.2rem;
+}

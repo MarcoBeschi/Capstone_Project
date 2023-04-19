@@ -1,0 +1,80 @@
+package com.TourViaggi.controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.TourViaggi.entity.Attivita;
+import com.TourViaggi.entity.Localita;
+import com.TourViaggi.entity.User;
+import com.TourViaggi.repository.LocalitaRepository;
+import com.TourViaggi.repository.UserRepository;
+import com.TourViaggi.service.AttivitaService;
+import com.TourViaggi.service.LocalitaServiceImpl;
+
+@RestController
+@RequestMapping("/api/localita")
+public class LocalitaController {
+
+  private final LocalitaServiceImpl localitaService;
+  private final LocalitaRepository localitaRepository;
+  private final AttivitaService attivitaService; // Aggiungiamo l'attivitaService all'autowired
+
+  @Autowired
+  public LocalitaController(LocalitaServiceImpl localitaService, LocalitaRepository localitaRepository, AttivitaService attivitaService) {
+    this.localitaService = localitaService;
+    this.localitaRepository = localitaRepository;
+    this.attivitaService = attivitaService;
+  }
+  
+  @GetMapping("/{id}")
+  public ResponseEntity<Localita> getLocalitaById(@PathVariable Long id) {
+      Optional<Localita> localitaOpt = localitaRepository.findByIdWithAttivita(id);
+      if (localitaOpt.isPresent()) {
+          Localita localita = localitaOpt.get();
+          localita.getAttivita().forEach(a -> a.setLocalita(null)); // rimuovi il riferimento circolare
+          List<Attivita> attivita = attivitaService.getAttivitaByLocalitaId(id); // chiama il metodo sull'autowired
+          localita.setAttivita(attivita);
+          return new ResponseEntity<>(localita, HttpStatus.OK);
+      }
+      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+  }
+  @GetMapping("")
+  public ResponseEntity<List<Localita>> getAllLocalita() {
+      List<Localita> localitaList = localitaService.getAllLocalita();
+      for (Localita localita : localitaList) {
+          localita.setAttivita(null);
+      }
+      return new ResponseEntity<>(localitaList, HttpStatus.OK);
+  }
+  private User getCurrentUser() {
+	    Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+	    String currentUsername = authentication.getName();
+	    return UserRepository.findByUsername(currentUsername).orElseThrow(() -> new RuntimeException("User not found"));
+	}
+  
+  @PostMapping("/{localitaId}/prenotazioni")
+  public ResponseEntity<String> prenotaLocalita(@PathVariable Long localitaId,
+                                             @RequestParam String data,
+                                             @RequestParam int numPartecipanti) {
+      User currentUser = getCurrentUser(); // Usa il metodo getCurrentUser() per ottenere l'utente corrente
+      try {
+          localitaService.prenotaLocalita(localitaId, currentUser.getId(), data, numPartecipanti);
+          return new ResponseEntity<>("Prenotazione effettuata con successo", HttpStatus.OK);
+      } catch (RuntimeException e) {
+          return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+      }
+  }
+  
+}

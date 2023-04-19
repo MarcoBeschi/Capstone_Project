@@ -1,0 +1,5 @@
+package com.TourViaggi.entity;
+
+public class Localita {
+
+}

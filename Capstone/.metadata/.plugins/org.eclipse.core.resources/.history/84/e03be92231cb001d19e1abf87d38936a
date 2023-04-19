@@ -1,0 +1,18 @@
+package com.TourViaggi.service;
+
+
+
+import java.util.ArrayList;
+
+import com.TourViaggi.entity.Attivita;
+import com.TourViaggi.entity.Localita;
+
+public class AttivitaService {
+	
+	public void addAttivita(Attivita attivita, Localita localita) {
+	    if (localita.getAttivita() == null) {
+	        localita.setAttivita(new ArrayList<>());
+	    }
+	    localita.getAttivita().add(attivita);
+	    attivita.setLocalita(localita);
+	}}

@@ -1,0 +1,18 @@
+
+<div class="carouselExampleFade carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div *ngFor="let x of localita.slice(1, 7); let i=index" class="carousel-item" [class.active]="i==0" data-bs-interval="3000">
+      <img [src]="x.fotoLocalita[0]" class="d-block w-100" alt="Immagine {{x.titolo}}" (error)="'Errore di caricamento immagine: ' + x.fotoLocalita[0]" style="height: 75vh; object-fit: cover;">
+      <div class="carousel-caption">
+        <h3>Scopri Alcune Tra Le Piu Belle Citta Del Mondo</h3>
+        <h2>{{x.titolo}}</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <h1>Vivi le città più belle del Mondo</h1>
+  <div class="container d-none d-md-block">
+  <h5>Prenota il tuo tour in Italia, grazie ai nostri partner , puoi prenotare tour e visite guidate in tutto il mondo, compresi i migliori tour in Italia. Basta inserire la città di destinazione nella barra di ricerca del sito, e avrai accesso a tutte le offerte di tour e transfer disponibili a prezzi imbattibili.</h5>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+
+input{
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+
+  margin-bottom: 10px;
+  font-weight: bold;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+
+}
+::placeholder{
+    color: rgba(0, 0, 0, 0.575);
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+  }
+
+button{
+  color: black;
+  border: 1px solid black;
+}
+.contenitore{
+background-image:url('https://i0.wp.com/www.innviaggithailandia.com/wp-content/uploads/2019/05/maldive-dallalto.jpg?fit=1200%2C900&ssl=1') ;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 100vh;
+}
+form{
+border: 1px solid rgb(14, 27, 44);
+padding: 5%;
+box-shadow: 6px 8px 10px black;
+border-radius: 6vh;
+width: 30vw;
+float: right;
+margin-top: 10%;
+margin-right: 30%;
+
+}
+p{
+  font-weight: bold;
+      font-style: italic;
+      font-family: 'Playfair Display', serif;
+      text-shadow: 4px 4px 3px black;
+      color: rgb(246, 237, 237);
+      font-size: 1.6rem;
+}
+h5{
+font-weight: bold;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 4px 4px 3px black;
+    color: rgb(246, 237, 237);
+    cursor: pointer;
+}
+em{
+  cursor: pointer;
+}
+@media screen and (max-width: 767px){
+  form{
+    width: 100%;
+    margin-right: 0;
+  }
+}

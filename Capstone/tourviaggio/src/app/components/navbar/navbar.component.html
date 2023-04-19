@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-md navbar-light">
+  <div class="container-fluid">
+      <ul class="navbar-nav me-auto mb-2 mg-lg-0">
+        <li class="nav-item">
+          <a href="#"><img src="https://i.pinimg.com/564x/2f/a2/32/2fa2321cb1703d6eef32410774156fed.jpg" alt="" class="img-thumbnail ms-3"></a>
+        </li>
+      </ul>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="search-bar" *ngIf="showSearchBar()">
+        <input type="text" [(ngModel)]="searchTerm" (input)="searchLocations()" placeholder="Cerca località" class="input-search" *ngIf="showSearchBar()">
+        <div *ngIf="showResults" class="tendina" id="tendina">
+          <ul class="navbar-nav flex-column">
+            <li *ngFor="let localita of filteredLocalita" class="nav-item">
+              <a [routerLink]="['/localita', localita.id]"class="nav-link localita-search" (click)="searchTerm = localita.name">{{localita.name}}</a>
+            </li>
+          </ul>
+          <p *ngIf="filteredLocalita.length === 0">Nessuna località trovata</p>
+        </div>
+      </div>
+      <div class="nav-item me-4 " *ngIf="isLoggedIn">
+        <a routerLink="/users"class="nav-link dx" routerLinkActive="active">Viaggi Prenotati</a>
+      </div>
+      <div class="navbar-nav  me-5">
+        <li class="nav-item ms-5 " *ngIf="!isLoggedIn">
+          <a routerLink="/login"class="nav-link dx" routerLinkActive="active">Log-In</a>
+        </li>
+        <li class="nav-item " *ngIf="!isLoggedIn">
+          <a routerLink="/signup" class="nav-link dx" routerLinkActive="active">Sign-up</a>
+        </li>
+      </div>
+      <button class="button-57" type="button" role="button" (click)="onLogOut()" *ngIf="isLoggedIn">
+        <span class="text ms-2">{{currentUser ? capitalizeFirstLetter(currentUser.username) : 'Utente'}}</span> <span>Log-Out</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+

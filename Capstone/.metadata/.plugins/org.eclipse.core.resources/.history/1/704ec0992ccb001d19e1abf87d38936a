@@ -1,0 +1,89 @@
+package com.TourViaggi.runner;
+
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Set;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
+
+import com.TourViaggi.entity.Localita;
+import com.TourViaggi.entity.Role;
+
+import com.TourViaggi.repository.LocalitaRepository;
+import com.TourViaggi.repository.RoleRepository;
+import com.TourViaggi.repository.UserRepository;
+import com.TourViaggi.service.AuthService;
+import com.TourViaggi.repository.AttivitaRepository;
+
+@Component
+public class TourRunner implements ApplicationRunner {
+	
+	@Autowired RoleRepository roleRepository;
+	@Autowired UserRepository userRepository;
+	@Autowired LocalitaRepository localitaRepository;
+	@Autowired AttivitaRepository AttivitaRepository;
+	@Autowired PasswordEncoder passwordEncoder;
+	@Autowired AuthService authService;
+	
+	private Set<Role> adminRole;
+	private Set<Role> moderatorRole;
+	private Set<Role> userRole;
+	
+	@Override
+	public void run(ApplicationArguments args) throws Exception {
+		System.out.println("Run...");
+		
+		 String url = "jdbc:postgresql://localhost:5432/viaggio";
+	        String username = "postgres";
+	        String password = "root";
+		
+	     try (Connection conn = DriverManager.getConnection(url, username, password);
+	             Statement stmt = conn.createStatement()) {
+	             
+	            String sql = "ALTER TABLE localita ALTER COLUMN descrizione1 TYPE VARCHAR(10000) USING LEFT(descrizione1, 1000);";
+	            stmt.executeUpdate(sql);
+	            
+	            String sql1 = "ALTER TABLE localita ALTER COLUMN descrizione2 TYPE VARCHAR(10000) USING LEFT(descrizione2, 1000);";
+	            stmt.executeUpdate(sql1);
+	            
+	            String sql2 = "ALTER TABLE localita ALTER COLUMN foto_localita TYPE VARCHAR(10000)[];";
+	            stmt.executeUpdate(sql2);
+	            
+	            
+	            System.out.println("La definizione della colonna è stata modificata con successo!");
+	            
+	        } catch (SQLException e) {
+	            System.out.println("Errore durante la modifica della definizione della colonna: " + e.getMessage());
+	        }
+		
+		
+		Localita l1 = new Localita();
+        l1.setName("Maldive");
+        l1.setTitolo("Maldive");
+        l1.setDescrizione1("Una meta da sogno, agognata dalla maggior parte dei turisti del mondo: benvenuti alle Maldive! Questo splendido arcipelago bagnato dall’Oceano Indiano gode di un clima spettacolare per tutta la durata dell'anno. Un paradiso incantevole, regno di barriere coralline, acque limpide e natura incontaminata, ideale per fare da sfondo alle vostre vacanze più belle. Le Maldive ruberanno il vostro cuore, regalandovi probabilmente la vacanza più bella che potrete mai fare; queste isole magiche rappresentano un'attrazione imperdibile per le coppie, per le famiglie e anche per i gruppi di amici che adorano il divertimento e la frenesia della vita notturna. Regalatevi una vacanza alle Maldive per immergervi in uno scenario quasi incantato.");
+        l1.setDescrizione2("Quello dell’arcipelago delle Maldive è sicuramente uno dei mari più belli del mondo: le spiagge di sabbia bianca sono bagnate da acque limpide dove è un privilegio poter nuotare e scoprire le bellezze marine, praticare sport subacquei e provare l’incredibile sensazione di stare dispersi in un paradiso perduto, dove il tempo si ferma e non riparte più.");
+        String[] foto= {"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.jambotour.it%2Fmaldive-esclusive-cinque-esperienze-imperdibili%2F&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABAE","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ansa.it%2Fcanale_viaggiart%2Fit%2Fnotizie%2Fmondo%2F2021%2F03%2F25%2Fsognando-le-maldive-in-attesa-di-tornare-a-viaggiare_c6dd5e42-464b-46dd-936c-006c1944f890.html&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABAJ","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dove-e-quando.it%2Fwhen%2Fasia-centrale-e-meridionale%2Fmaldive%2F&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABAR","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ilfattoquotidiano.it%2F2021%2F11%2F19%2Fmaldive-la-destinazione-piu-desiderata-dagli-italiani%2F6395487%2F&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABAx","https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.travelfar.it%2Fguida-delle-maldive%2F&psig=AOvVaw2VEIiXNDQiuw3SKlt6VWrd&ust=1679580896775000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC3yMfc7_0CFQAAAAAdAAAAABA5"};
+        l1.setFotoLocalita(foto);
+        l1.setVideo("https://youtu.be/pyaqH23zVdg");
+        l1.setPrezzo(79.99);
+        l1.setValutazione("8,5/10");
+        l1.setCoordinataX("3.202778");
+        l1.setCoordinataY("73.220680");
+       
+        
+        localitaRepository.save(l1);
+		
+	}
+	
+	
+
+}

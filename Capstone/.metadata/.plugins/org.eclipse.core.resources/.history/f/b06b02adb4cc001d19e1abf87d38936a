@@ -1,0 +1,34 @@
+package com.TourViaggi.service;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.TourViaggi.entity.Localita;
+import com.TourViaggi.repository.LocalitaRepository;
+
+@Service
+public class LocalitaService {
+
+    @Autowired
+    private LocalitaRepository localitaRepository;
+
+    public Localita creaLocalita(String name,String titolo, String descrizione1, String descrizione2, double prezzo, String valutazione,String[] FotoLocalita, String video, String coordinataX, String coordinataY) {
+        Localita localita = new Localita();
+        localita.setName(name);
+        localita.setTitolo(titolo);
+        localita.setDescrizione1(descrizione1);
+        localita.setDescrizione2(descrizione2);
+        localita.setPrezzo(prezzo);
+        localita.setValutazione(valutazione);
+        localita.setFotoLocalita(FotoLocalita);
+        localita.setVideo(video);
+        localita.setCoordinataX(coordinataX);
+        localita.setCoordinataY(coordinataY);
+        return localita;
+    }
+
+    public void salvaLocalita(Localita localita) {
+        localitaRepository.save(localita);
+    }
+}

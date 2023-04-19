@@ -1,0 +1,17 @@
+<div class="contenitore">
+  <div class="center-container">
+  <div class="container">
+    <form #f="ngForm" id="form" (ngSubmit)="loginForm(f)">
+      <div class="d-flex logIn flex-column justify-content-center">
+        <p class="fs-2">EFFETTUA L'ACCESSO PER PRENOTARE I NOSTRI TOUR</p>
+        <input type="text" ngModel name="username" placeholder="username" class=" form-group" required>
+        <input type="password" ngModel name="password" placeholder="password" autocomplete="current-password" class=" form-group" required>
+        <button type="submit" class="btn btn-info text-center text-dark fw-bold" [disabled]="f.invalid">Login</button>
+        <button type="submit" routerLink="/homepage" class="btn btn-info text-center text-dark fw-bold mt-3">Torna alla HomePage</button>
+        <p>Se non ti sei ancora registrato <em routerLink="/signup" class="text-danger">Clicca Qui</em> </p>
+        <small *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</small>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
